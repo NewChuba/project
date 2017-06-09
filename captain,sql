@@ -1,0 +1,131 @@
+-- --------------------------------------------------------
+-- Хост:                         127.0.0.1
+-- Версия сервера:               5.5.55 - MySQL Community Server (GPL)
+-- ОС Сервера:                   Win32
+-- HeidiSQL Версия:              9.3.0.4984
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Дамп структуры базы данных captain
+CREATE DATABASE IF NOT EXISTS `captain` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `captain`;
+
+
+-- Дамп структуры для таблица captain.father
+CREATE TABLE IF NOT EXISTS `father` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(255) DEFAULT NULL,
+  `work` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+
+-- Дамп данных таблицы captain.father: ~20 rows (приблизительно)
+/*!40000 ALTER TABLE `father` DISABLE KEYS */;
+INSERT INTO `father` (`id`, `full_name`, `work`, `address`, `mobile`) VALUES
+	(1, 'Романов В.В.', 'Безработный', 'Глазов', 123),
+	(2, 'Иванов А. В.', 'Безработный', 'п. Яр', NULL),
+	(3, 'Сидоров П. Р.', 'Безработный', 'г. Ижевск', NULL),
+	(4, 'Парамонов Р. О', 'Безработный', 'г. Москва', NULL),
+	(5, 'Петров Д. Н.', 'Безработный', 'г. Воронеж', NULL),
+	(6, 'Волков А. А.', 'Безработный', 'д. Кестым', NULL),
+	(7, 'Пономарев М. И.', 'Безработный', 'г. Москва', NULL),
+	(8, 'Семенов И. М.', 'Безработный', 'г. Оренбург', NULL),
+	(9, 'Зубков А. О.', 'Безработный', 'г. Санкт-Питербург', NULL),
+	(10, 'Третьяков О. Д.', 'Безработный', 'г. Ижевск', NULL),
+	(11, 'Опарин Г. Р.', 'Безработный', 'п. Балезино', NULL),
+	(12, 'Князев П. Б.', 'Безработный', 'с. Исаково', NULL),
+	(13, 'Иванов И. А.', 'Безработный', 'г. Самара', NULL),
+	(14, 'Лекомцев К. Н.', 'Безработный', 'г. Сарапул', NULL),
+	(15, 'Смирнов Т. Л.', 'Безработный', 'д. Понино', NULL),
+	(16, 'Маккаров С. Д.', 'Безработный', 'г. Екатеренбург', NULL),
+	(17, 'Чирков Е. И.', 'Безработный', 'г. Пенза', NULL),
+	(18, 'Ушаков М.О.', 'Безработный', 'с. Селычка', NULL),
+	(19, 'Педин Н. Д.', 'Безработный', 'г. Калининград', NULL),
+	(20, 'Касимов В. А', 'Безработный', 'г. Сочи', NULL);
+/*!40000 ALTER TABLE `father` ENABLE KEYS */;
+
+
+-- Дамп структуры для таблица captain.mother
+CREATE TABLE IF NOT EXISTS `mother` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(255) DEFAULT NULL,
+  `work` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+-- Дамп данных таблицы captain.mother: ~20 rows (приблизительно)
+/*!40000 ALTER TABLE `mother` DISABLE KEYS */;
+INSERT INTO `mother` (`id`, `full_name`, `work`, `address`, `mobile`) VALUES
+	(1, 'Романова Т.П.', 'Безработная', 'г. Глазов', 34),
+	(2, 'Иванова П.А.', 'Безработная', 'п. Яр УР', 25),
+	(3, 'Сидорова К. А', 'Безработная', 'г. Ижевск', NULL),
+	(4, 'Паромонова С. В.', 'Безработная', 'г. Москва', NULL),
+	(5, 'Петрова Е. Г.', 'Безработная', 'г. Воронеж', NULL),
+	(6, 'Волкова Е. П', 'Безработная', 'д. Кестым', NULL),
+	(7, 'Понамарева К. И.', 'Безработная', 'г. Москва', NULL),
+	(8, 'Семенова У. В.', 'Безработная', 'г. Оренбург', NULL),
+	(9, 'Зубкова Г. М.', 'Безработная', 'г. Санкт-Питербург', NULL),
+	(10, 'Третьякова З. Р.', 'Безработная', 'г. Ижевск', NULL),
+	(11, 'Опарина В. И.', 'безработная', 'п. Балезино', NULL),
+	(12, 'Князева В. Ю.', 'Безработная', 'с. Исаково', NULL),
+	(13, 'Иванова У. А.', 'Безработная', 'г. Самара', NULL),
+	(14, 'Лекомцева А. С.', 'Безработная', 'г. Сарапул', NULL),
+	(15, 'Смирнова Т. М.', 'Безработная', 'д. Понино', NULL),
+	(16, 'Макарова Я. Ю.', 'Безработная', 'г. Екатеренбург', NULL),
+	(17, 'Чиркова Р. Т.', 'Безработная', 'г. Пенза', NULL),
+	(18, 'Ушакова А. Д.', 'Безработная', 'с. Селычка', NULL),
+	(19, 'Педина Т. В.', 'Безработная', 'г. Калининград', NULL),
+	(20, 'Касимова Н. Н.', 'Безработная ', 'г. Сочи', NULL);
+/*!40000 ALTER TABLE `mother` ENABLE KEYS */;
+
+
+-- Дамп структуры для таблица captain.warpeople
+CREATE TABLE IF NOT EXISTS `warpeople` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(255) NOT NULL,
+  `rang` varchar(255) NOT NULL,
+  `mother` int(11),
+  `father` int(11),
+  `institution` varchar(255) DEFAULT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_warpeople_mother` (`mother`),
+  KEY `FK_warpeople_father` (`father`),
+  CONSTRAINT `FK_warpeople_mother` FOREIGN KEY (`mother`) REFERENCES `mother` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1131 DEFAULT CHARSET=utf8;
+
+-- Дамп данных таблицы captain.warpeople: ~20 rows (приблизительно)
+/*!40000 ALTER TABLE `warpeople` DISABLE KEYS */;
+INSERT INTO `warpeople` (`id`, `full_name`, `rang`, `mother`, `father`, `institution`, `mobile`) VALUES
+	(1111, 'Романов В. В.', 'генерал', 1, 1, NULL, NULL),
+	(1112, 'Иванов И. М.', 'рядовой', 2, 2, NULL, NULL),
+	(1113, 'Сидоров Н. М.', 'рядовой', 3, 3, NULL, NULL),
+	(1114, 'Петров Т. В.', 'полковник', 4, 4, NULL, NULL),
+	(1115, 'Иванов К. Р.', 'рядовой', 5, 5, NULL, NULL),
+	(1116, 'Парамонов В. К.', 'рядовой', 6, 6, NULL, NULL),
+	(1117, 'Погорелов С. И.', 'подполконвник', 7, 7, NULL, NULL),
+	(1118, 'Чувашов М. А.', 'сержант', 8, 8, NULL, NULL),
+	(1119, 'Зубков В. В.', 'майор', 9, 9, NULL, NULL),
+	(1120, 'Третьяков В. Л.', 'рядовой', 10, 10, NULL, NULL),
+	(1121, 'Опарин', 'младший сержант', 11, 11, NULL, NULL),
+	(1122, 'Князев', 'капитан', 12, 12, NULL, NULL),
+	(1123, 'Иванов В. К.', 'рядовой', 13, 13, NULL, NULL),
+	(1124, 'Лекомцев М. И.', 'лейтинант', 14, 14, NULL, NULL),
+	(1125, 'Смирнов С. П.', 'рядовой', 15, 15, NULL, NULL),
+	(1126, 'Макаров Д. И.', 'рядовой', 16, 16, NULL, NULL),
+	(1127, 'Чирков Р. В.', 'рядовой', 17, 17, NULL, NULL),
+	(1128, 'Ушаков И. С.', 'рядовой', 18, 18, NULL, NULL),
+	(1129, 'Педин Г. В.', 'рядовой', 19, 19, NULL, NULL),
+	(1130, 'Касимов Б. О.', 'рядовой', 20, 20, NULL, NULL);
+/*!40000 ALTER TABLE `warpeople` ENABLE KEYS */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
